@@ -1,7 +1,7 @@
 """ Docx
 
-author: ashraf minhaj
-mail  : ashraf_minhaj@yahoo.com
+author: Harsh Shah
+mail  : harsh.r.shah2102@outlook.com
 """
 
 """
@@ -284,7 +284,7 @@ class MainApp(QMainWindow):
         text = self.editor.toPlainText()
 
         try:
-            with open(path, 'w') as f:
+            with open(self.path, 'w') as f:
                 f.write(text)
                 self.update_title()
         except Exception as e:
