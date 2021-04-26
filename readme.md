@@ -8,12 +8,12 @@ Commands:
 
 For Windows:
 ```
-pip install pyqt5 docx2txt
+pip install -r requirements.txt
 ```
 
 For Linux:
 ```
-pip3 install pyqt5 docx2txt
+pip3 install -r requirements.txt
 ```
 
 To Run the script:

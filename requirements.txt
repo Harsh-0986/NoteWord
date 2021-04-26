@@ -1,26 +1,14 @@
-altgraph==0.17
-cachetools==4.2.1
-docx2txt==0.8
-future==0.18.2
-pefile==2019.4.18
-py2exe==0.10.3.1
-pyinstaller==4.3
-pyinstaller-hooks-contrib==2021.1
-PyQt5==5.15.4
-PyQt5-Qt5==5.15.2
-PyQt5-sip==12.8.1
-pywin32-ctypes==0.2.0
-# This file contains all python dependencies that are required by the textract
-# package in order for it to properly work.
-
-argcomplete==1.10.0
-beautifulsoup4==4.8.0
 chardet==3.0.4
-docx2txt==0.8
 EbookLib==0.17.1
 extract-msg==0.23.1
 pdfminer.six==20181108
-python-pptx==0.6.18
-six==1.12.0
-SpeechRecognition==3.8.1
-xlrd==1.2.0
+pycryptodome==3.10.1
+PyQt5==5.15.4
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.8.1
+pytz==2021.1
+pywin32-ctypes==0.2.0
+sortedcontainers==2.3.0
+soupsieve==2.2.1
+tzlocal==1.5.1
+XlsxWriter==1.4.0
