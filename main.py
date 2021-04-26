@@ -1,21 +1,8 @@
-""" Docx
-
-author: Harsh Shah
-mail  : harsh.r.shah2102@outlook.com
-"""
-
-"""
-install -
-$ pip install pyqt5
-$ pip install docx2txt
-"""
-
 import sys
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtPrintSupport import *
-import textract
 import urllib.request
 
 class MainApp(QMainWindow):
