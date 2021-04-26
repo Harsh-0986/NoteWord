@@ -15,8 +15,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtPrintSupport import *
-import docx2txt
-
+import textract
+import urllib.request
 
 class MainApp(QMainWindow):
     """ the main class of our app """
@@ -117,12 +117,22 @@ class MainApp(QMainWindow):
         ToolBar = QToolBar("Tools", self)
 
         # undo
-        undo_action = QAction(QIcon("undo.png"), 'Undo', self)
+        url3 = "https://cdn4.iconfinder.com/data/icons/navigation-40/24/rotate-2-512.png"
+        data3 = urllib.request.urlopen(url3).read()
+        pixmap3 = QPixmap()
+        pixmap3.loadFromData(data3)
+        
+        undo_action = QAction(QIcon(pixmap3), 'Undo', self)
         undo_action.triggered.connect(self.editor.undo)
         ToolBar.addAction(undo_action)
 
         # redo
-        redo_action = QAction(QIcon("redo.png"), 'Redo', self)
+        url4 = "https://cdn4.iconfinder.com/data/icons/vectory-multimedia-1/40/redo_2-512.png"
+        data4 = urllib.request.urlopen(url4).read()
+        pixmap4 = QPixmap()
+        pixmap4.loadFromData(data4)
+
+        redo_action = QAction(QIcon(pixmap4), 'Redo', self)
         redo_action.triggered.connect(self.editor.redo)
         ToolBar.addAction(redo_action)
 
@@ -130,17 +140,32 @@ class MainApp(QMainWindow):
         ToolBar.addSeparator()
 
         # copy
-        copy_action = QAction(QIcon("copy.png"), 'Copy', self)
+        url5 = "https://cdn3.iconfinder.com/data/icons/business-912/24/copy-512.png"
+        data5 = urllib.request.urlopen(url5).read()
+        pixmap5 = QPixmap()
+        pixmap5.loadFromData(data5)
+
+        copy_action = QAction(QIcon(pixmap5), 'Copy', self)
         copy_action.triggered.connect(self.editor.copy)
         ToolBar.addAction(copy_action)
 
         # cut 
-        cut_action = QAction(QIcon("cut.png"), 'Cut', self)
+        url6 = "https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-032_scissors_cut-512.png"
+        data6 = urllib.request.urlopen(url6).read()
+        pixmap6 = QPixmap()
+        pixmap6.loadFromData(data6)
+
+        cut_action = QAction(QIcon(pixmap6), 'Cut', self)
         cut_action.triggered.connect(self.editor.cut)
         ToolBar.addAction(cut_action)
 
         # paste
-        paste_action = QAction(QIcon("paste.png"), 'Paste', self)
+        url7 = "https://cdn1.iconfinder.com/data/icons/material-core/22/content-paste-512.png"
+        data7 = urllib.request.urlopen(url7).read()
+        pixmap7 = QPixmap()
+        pixmap7.loadFromData(data7)
+
+        paste_action = QAction(QIcon(pixmap7), 'Paste', self)
         paste_action.triggered.connect(self.editor.paste)
         ToolBar.addAction(paste_action)
 
@@ -164,17 +189,29 @@ class MainApp(QMainWindow):
         ToolBar.addSeparator()
 
         # bold
-        bold_action = QAction(QIcon("bold.png"), 'Bold', self)
+        url = "https://cdn2.iconfinder.com/data/icons/font-awesome/1792/bold-512.png"
+        data = urllib.request.urlopen(url).read()
+        pixmap = QPixmap()
+        pixmap.loadFromData(data)
+        bold_action = QAction(QIcon(pixmap), 'Bold', self)
         bold_action.triggered.connect(self.bold_text)
         ToolBar.addAction(bold_action)
 
         # underline
-        underline_action = QAction(QIcon("underline.png"), 'Underline', self)
+        url2 = "https://cdn1.iconfinder.com/data/icons/feather-2/24/underline-512.png"
+        data2 = urllib.request.urlopen(url2).read()
+        pixmap2 = QPixmap()
+        pixmap2.loadFromData(data2)
+        underline_action = QAction(QIcon(pixmap2), 'Underline', self)
         underline_action.triggered.connect(self.underline_text)
         ToolBar.addAction(underline_action)
 
         # italic
-        italic_action = QAction(QIcon("italic.png"), 'Italic', self)
+        url1 = "https://cdn4.iconfinder.com/data/icons/feather/24/italic-512.png"
+        data1 = urllib.request.urlopen(url1).read()
+        pixmap1 = QPixmap()
+        pixmap1.loadFromData(data1)
+        italic_action = QAction(QIcon(pixmap1), 'Italic', self)
         italic_action.triggered.connect(self.italic_text)
         ToolBar.addAction(italic_action)
 
@@ -182,15 +219,30 @@ class MainApp(QMainWindow):
         ToolBar.addSeparator()
 
         # text alignment
-        right_alignment_action = QAction(QIcon("right-align.png"), 'Align Right', self)
+        url8 = "https://cdn1.iconfinder.com/data/icons/feather-2/24/align-right-512.png"
+        data8 = urllib.request.urlopen(url8).read()
+        pixmap8 = QPixmap()
+        pixmap8.loadFromData(data8)
+
+        right_alignment_action = QAction(QIcon(pixmap8), 'Align Right', self)
         right_alignment_action.triggered.connect(lambda : self.editor.setAlignment(Qt.AlignRight))
         ToolBar.addAction(right_alignment_action)
 
-        left_alignment_action = QAction(QIcon("left-align.png"), 'Align Left', self)
+        url9 = "https://cdn1.iconfinder.com/data/icons/feather-2/24/align-left-512.png"
+        data9 = urllib.request.urlopen(url9).read()
+        pixmap9 = QPixmap()
+        pixmap9.loadFromData(data9)
+
+        left_alignment_action = QAction(QIcon(pixmap9), 'Align Left', self)
         left_alignment_action.triggered.connect(lambda : self.editor.setAlignment(Qt.AlignLeft))
         ToolBar.addAction(left_alignment_action)
 
-        justification_action = QAction(QIcon("justification.png"), 'Center/Justify', self)
+        url10 = "https://cdn2.iconfinder.com/data/icons/viiva-content-editor/32/justify-512.png"
+        data10 = urllib.request.urlopen(url10).read()
+        pixmap10 = QPixmap()
+        pixmap10.loadFromData(data10)
+
+        justification_action = QAction(QIcon(pixmap10), 'Center/Justify', self)
         justification_action.triggered.connect(lambda : self.editor.setAlignment(Qt.AlignCenter))
         ToolBar.addAction(justification_action)
 
@@ -198,12 +250,22 @@ class MainApp(QMainWindow):
         ToolBar.addSeparator()
 
         # zoom in
-        zoom_in_action = QAction(QIcon("zoom-in.png"), 'Zoom in', self)
+        url11 = "https://cdn1.iconfinder.com/data/icons/feather-2/24/zoom-in-512.png"
+        data11 = urllib.request.urlopen(url11).read()
+        pixmap11 = QPixmap()
+        pixmap11.loadFromData(data11)
+
+        zoom_in_action = QAction(QIcon(pixmap11), 'Zoom in', self)
         zoom_in_action.triggered.connect(self.editor.zoomIn)
         ToolBar.addAction(zoom_in_action)
 
         # zoom out
-        zoom_out_action = QAction(QIcon("zoom-out.png"), 'Zoom out', self)
+        url12 = "https://cdn1.iconfinder.com/data/icons/feather-2/24/zoom-out-512.png"
+        data12 = urllib.request.urlopen(url12).read()
+        pixmap12 = QPixmap()
+        pixmap12.loadFromData(data12)
+
+        zoom_out_action = QAction(QIcon(pixmap12), 'Zoom out', self)
         zoom_out_action.triggered.connect(self.editor.zoomOut)
         ToolBar.addAction(zoom_out_action)
 
@@ -244,16 +306,19 @@ class MainApp(QMainWindow):
 
 
     def file_open(self):
-        self.path, _ = QFileDialog.getOpenFileName(self, "Open file", "", "Text documents (*.text);Text documents (*.txt);All files (*.*)")
+        self.path, _ = QFileDialog.getOpenFileName(self, "Open file", "", "All files (*.*)")
 
         try:
-            #with open(self.path, 'r') as f:
-            #    text = f.read()
-            text = docx2txt.process(self.path) # docx2txt
-            #doc = Document(self.path)         # if using docx
-            #text = ''
-            #for line in doc.paragraphs:
-            #    text += line.text
+            #  if self.path.endswith(('.doc', '.docx')):
+            #      text = textract.process(self.path)
+            #      print(text)
+            #      doc = Document(self.path)
+            #      text = ''
+            #      for line in doc.paragraphs:
+            #          text+=line.text
+            # else:
+            with open(self.path, 'r') as f:
+                text = f.read()
         except Exception as e:
             print(e)
         else:
