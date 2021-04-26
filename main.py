@@ -23,7 +23,7 @@ class MainApp(QMainWindow):
         self.create_menu_bar()
         self.create_toolbar()
 
-        # after craeting toolabr we can call and select font size
+        # after creating toolabr we can call and select font size
         font = QFont('Times', 12)
         self.editor.setFont(font)
         self.editor.setFontPointSize(12)

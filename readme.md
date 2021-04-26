@@ -27,3 +27,5 @@ For Linux:
 ```
 python3 main.py
 ```
+
+Please don't try to open any doc files.
