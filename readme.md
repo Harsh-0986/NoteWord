@@ -32,7 +32,6 @@ Commands:
 pip3 install -r requirements.txt
 ```
 
-For Linux:
 ```
 python3 main.py
 ```
