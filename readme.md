@@ -1,7 +1,9 @@
-# Google_Doc_Clone
-A fully functional Google Doc Clone
+# NoteWord
 
-To use the clone
+## To use it download the exe file [here](https://github.com/Harsh-0986/NoteWord/releases/tag/v1.0.1)
+
+## To build from source
+
 Install PyQt5 and docx2txt 
 
 Commands:
@@ -28,4 +30,5 @@ For Linux:
 python3 main.py
 ```
 
-Please don't try to open any doc files.
+## Note
+### Please don't try to open any doc files.
