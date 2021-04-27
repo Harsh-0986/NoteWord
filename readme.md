@@ -20,7 +20,7 @@ python main.py
 
 ## For Linux:
 
-### To use it download the stanalone executable [here](https://github.com/Harsh-0986/NoteWord/archive/refs/tags/v1.0.1.zip) or you can also get it [here](https://github.com/Harsh-0986/NoteWord/archive/refs/tags/v1.0.1.tar.gz)
+### To use it download the zip file from [here](https://github.com/Harsh-0986/NoteWord/archive/refs/tags/v1.0.1.zip) or you can also get tar.gz file [here](https://github.com/Harsh-0986/NoteWord/archive/refs/tags/v1.0.1.tar.gz)
 
 ### To build from source
 
