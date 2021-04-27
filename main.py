@@ -36,7 +36,11 @@ class MainApp(QMainWindow):
 
         """ add elements to the menubar """
         # App icon will go here
-        app_icon = menuBar.addMenu(QIcon(), "icon")
+        url13 = "https://raw.githubusercontent.com/Harsh-0986/google-doc-clone/main/ico.ico"
+        data13 = urllib.request.urlopen(url13).read()
+        pixmap13 = QPixmap()
+        pixmap13.loadFromData(data13)
+        app_icon = menuBar.addMenu(QIcon(pixmap13), "icon")
 
         # file menu **
         file_menu = QMenu("File", self)
