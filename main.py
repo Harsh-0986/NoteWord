@@ -12,7 +12,7 @@ class MainApp(QMainWindow):
         super().__init__()                         # parent class initializer
 
         # window title
-        self.title = "Google Doc Clone"
+        self.title = "NoteWord"
         self.setWindowTitle(self.title)
         
         # editor section
@@ -23,7 +23,7 @@ class MainApp(QMainWindow):
         self.create_menu_bar()
         self.create_toolbar()
 
-        # after creating toolabr we can call and select font size
+        # after creating toolbar we can call and select font size
         font = QFont('Times', 12)
         self.editor.setFont(font)
         self.editor.setFontPointSize(12)
@@ -36,7 +36,7 @@ class MainApp(QMainWindow):
 
         """ add elements to the menubar """
         # App icon will go here
-        app_icon = menuBar.addMenu(QIcon("doc_icon.png"), "icon")
+        app_icon = menuBar.addMenu(QIcon(), "icon")
 
         # file menu **
         file_menu = QMenu("File", self)

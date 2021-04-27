@@ -6,6 +6,5 @@ pyvenv.cfg
 .git
 main.spec
 pyvenv.cfg
-ico.ico
 build
 dist
