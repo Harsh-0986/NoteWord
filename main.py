@@ -293,7 +293,7 @@ class MainApp(QMainWindow):
 
 
     def file_open(self):
-        self.path, _ = QFileDialog.getOpenFileName(self, "Open file", "", "All files (*.*)")
+        self.path, _ = QFileDialog.getOpenFileName(self, "Open file", "", "Text Files(*.txt)")
 
         try:
             #  if self.path.endswith(('.doc', '.docx')):
@@ -313,7 +313,7 @@ class MainApp(QMainWindow):
             self.update_title()
 
     def file_save(self):
-        print(self.path)
+
         if self.path == '':
             # If we do not have a path, we need to use Save As.
             self.file_saveas()
@@ -328,8 +328,7 @@ class MainApp(QMainWindow):
             print(e)
 
     def file_saveas(self):
-        self.path, _ = QFileDialog.getSaveFileName(self, "Save file", "", "text documents (*.text);Text documents (*.txt);All files (*.*)")
-
+        self.path, _ = QFileDialog.getSaveFileName(self, "Save file", "", "Text Files(*.txt)")
         if self.path == '':
             return   # If dialog is cancelled, will return ''
 
@@ -346,8 +345,7 @@ class MainApp(QMainWindow):
         self.setWindowTitle(self.title + ' ' + self.path)
 
     def save_pdf(self):
-        f_name, _ = QFileDialog.getSaveFileName(self, "Export PDF", None, "PDF files (.pdf);;All files()")
-        print(f_name)
+        f_name, _ = QFileDialog.getSaveFileName(self, "Export PDF", None, "Pdf files(*.pdf)")
 
         if f_name != '':  # if name not empty
            printer = QPrinter(QPrinter.HighResolution)
